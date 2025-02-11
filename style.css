@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'poppins', sans-serif;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.calculator {
+    width: 400px;
+    background: #585f6e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 30px 10px rgba(0, 0, 0, 0.5);
+}
+
+.calc-input {
+    width: 100%;
+    border: none;
+    font-size: 35px;
+    text-align: right;
+    padding: 10px;
+    background-color: #585f6e;
+    color: #54b662;
+}
+
+#ope-input {
+    font-size: 20px;
+    color: white;
+}
+
+.calc-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+}
+
+.equal {
+    grid-column: span 2;
+    border-radius: 50px;
+}
+
+button {
+    padding: 15px;
+    font-size: 24px;
+    border: none;
+    border-radius: 45%;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #ccddce;
+}
+
+.operation {
+    background-color: #54b662;
+    color: white;
+}
+
+.operation:hover {
+    background-color: #7bc286;
+}
+
+.history-icon {
+    position: relative;
+    cursor: pointer;
+    height: 25px;
+    width: auto;
+    left: 1%;
+}
+
+.history-page {
+    position: absolute;
+    width: 360px;
+    background-color: #4daf56;
+    height: 350px;
+    color: #fff;
+    padding: 18px;
+    border-radius: 10px;
+    font-size: 25px;
+    overflow-y: auto;
+    display: none;
+}
+
+.history-page.active {
+    display: flex;
+    flex-direction: column;
+}
